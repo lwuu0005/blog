@@ -1,0 +1,37 @@
+@import url('https://cdn.jsdelivr.net/npm/@iconify/iconify@latest/dist/iconify.min.css');
+@import "tailwindcss";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 导入图标库 */
+
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  .no-print {
+    display: none;
+  }
+}
