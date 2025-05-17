@@ -1,4 +1,7 @@
 import './App.css'
+import portrait from './assets/portrait.jpg'
+import agent from './assets/AIagent.jpg'
+import wing from './assets/Wing.jpg'
 
 export default function Resume() {
   return (
@@ -9,14 +12,14 @@ export default function Resume() {
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white">
               <img 
-                src="https://via.placeholder.com/150" 
+                src={portrait} 
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="flex-1 text-center md:text-left">
-              <h1 className="text-3xl font-bold">Limin Wu</h1>
-              <h2 className="text-xl opacity-90 mb-4">Full Stack Developer</h2>
+              <h1 className="text-3xl font-bold">吴李岷</h1>
+              <h2 className="text-xl opacity-90 mb-4">全栈开发员</h2>
               <h2 className="text-xl opacity-90 mb-4">Monash University (Master of IT)</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
                 <div className="flex items-center">
@@ -27,10 +30,15 @@ export default function Resume() {
                   <span className="i-mdi-phone mr-2"></span>
                   {/* 010-1234-1234 */}
                 </div>
-                <div className="flex items-center">
-                  <span className="i-mdi-github mr-2"></span>
-                  https://github.com/lwuu0005/
+                <div class="flex items-center space-x-2">
+                  <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.753-1.333-1.753-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.47-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 013.005-.405c1.02.005 2.045.138 3.005.405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" clip-rule="evenodd"/>
+                  </svg>
+                  <a href="https://github.com/lwuu0005/" class="font-black hover:underline" target="_blank" rel="noopener noreferrer">
+                    https://github.com/lwuu0005/
+                  </a>
                 </div>
+
                 <div className="flex items-center">
                   <span className="i-mdi-web mr-2"></span>
                   {/* morethannin.web.app */}
@@ -59,28 +67,29 @@ export default function Resume() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* 项目1 */}
               <ProjectCard 
-                image="https://via.placeholder.com/400x250?text=Project+1"
-                title="E-commerce Platform"
-                description="A full-featured online shopping platform with payment integration and inventory management."
+                image= {agent}
+                title="智能代理排班"
+                description="在微软 AI Agents Hackathon 2025 中，与团队合作开发了一款基于智能代理的排班系统，旨在提升企业在复杂排班场景下的效率和智能化水平。该系统结合了前沿的人工智能技术和现代化的全栈开发框架，实现了高效、智能的排班解决方案。"
+                link="https://github.com/JunyIIIChen/working_schedule"
               />
               {/* 项目2 */}
               <ProjectCard 
-                image="https://via.placeholder.com/400x250?text=Project+2"
-                title="Task Management App"
-                description="A productivity application for organizing tasks with team collaboration features."
+                image= {wing}
+                title="Winged Wonders"
+                description="设计并开发了一个旨在教育儿童了解墨尔本濒危鸟类物种的网页应用。该项目使用 Flask、HTML、CSS、JavaScript 和 SQLite 构建，并部署在 AWS 上。该应用允许用户探索濒危鸟类的信息和图片，促进了公众的意识和学习。"
+                link="https://github.com/lwuu0005/fit5120"
               />
               {/* 项目3 */}
-              <ProjectCard 
+              {/* <ProjectCard 
                 image="https://via.placeholder.com/400x250?text=Project+3"
                 title="Weather Dashboard"
                 description="Real-time weather information with interactive maps and forecasting."
               />
-              {/* 项目4 */}
               <ProjectCard 
                 image="https://via.placeholder.com/400x250?text=Project+4"
                 title="Social Media Analytics"
                 description="Data visualization tool for tracking engagement across social platforms."
-              />
+              /> */}
             </div>
           </section>
 
@@ -107,13 +116,26 @@ export default function Resume() {
             <section>
               <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-200 pb-2">Experience</h2>
               <div className="space-y-4">
-                <ExperienceItem 
-                  title="Senior Frontend Developer"
-                  company="Tech Solutions Inc."
-                  period="2020 - Present"
-                  description="Lead the frontend team in developing responsive web applications using React and TypeScript."
+                <ExperienceItem
+                  title="前端开发工程师"
+                  company="上海津颐冷冻设备工程有限公司"
+                  period="2021.07-2022.07"
+                  description={
+                    <>
+                      <p>
+                        前端开发工程师
+                      </p>
+                      <p>
+                        • 参与前端技术架构设计与实施，采用 React.js二次开发前端监控系统，开发支持家乐福、沃尔玛等零售巨头的 HVAC 智能监控平台，日均处理设备数据 20W+ 条。
+                      </p>
+                      <p>
+                        • 结合 ECharts 可视化引擎 设计动态数据看板，支持实时曲线、热力图等多种展示方式，让客户直观监控系统运行状态。
+                      </p>
+
+                    </>
+                  }
                 />
-                <ExperienceItem 
+                {/* <ExperienceItem 
                   title="Frontend Developer"
                   company="Digital Creations"
                   period="2018 - 2020"
@@ -121,10 +143,10 @@ export default function Resume() {
                 />
                 <ExperienceItem 
                   title="Junior Web Developer"
-                  company="StartUp Labs"
+                  company=""
                   period="2016 - 2018"
                   description="Assisted in developing web applications and learned modern development practices."
-                />
+                /> */}
               </div>
             </section>
           </div>
@@ -135,17 +157,33 @@ export default function Resume() {
 }
 
 // 项目卡片组件
-function ProjectCard({ image, title, description }: { 
+function ProjectCard({ 
+  image, 
+  title, 
+  description,
+  link,
+  linkText = "View Project"
+}: { 
   image: string; 
   title: string; 
-  description: string 
+  description: string;
+  link: string;
+  linkText?: string;
 }) {
   return (
     <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
       <img src={image} alt={title} className="w-full h-48 object-cover" />
       <div className="p-4">
         <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
-        <p className="text-gray-600">{description}</p>
+        <p className="text-gray-600 mb-4">{description}</p>
+        <a 
+          href={link} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+        >
+          {linkText}
+        </a>
       </div>
     </div>
   );
